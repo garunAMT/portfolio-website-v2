@@ -9,7 +9,7 @@ export default function Hero() {
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap"
         rel="stylesheet"
       />
-      <section className="pt-24 pb-12 md:pt-32 md:pb-20">
+      <section className="pt-24 pb-12 md:pt-32 md:pb-20" id="home">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
@@ -27,14 +27,17 @@ export default function Hero() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button size="lg" asChild>
-                <Link href="#book-call" className="flex items-center gap-2">
+                <Link href="https://cal.com/anurag-tripathi" className="flex items-center gap-2">
                   Book a Call
                   <ArrowRight size={20} />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="flex items-center gap-2 bg-transparent">
-                <Download size={20} />
-                Download Resume
+              <Button variant="outline" size="lg" asChild className="flex items-center gap-2 bg-transparent">
+                <Link href={"https://drive.google.com/file/d/1WeveQlKMkh7ymsq7DkvOEuQIIpmpE_4w/view?usp=drive_link"} target="_blank">
+                                <Download size={20} />
+                View Resume
+                </Link>
+
               </Button>
             </div>
           </div>

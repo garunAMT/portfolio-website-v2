@@ -9,9 +9,9 @@ export default function BentoPortfolio() {
   const learningSkills = ["Proved Track Record", "Fast Delivery", "AI Ready", "Always Improving", "Feedback Friendly"]
 
   const recentWorks = [
-    { name: "Recruiter Agent", url: "100x-wallet.gxuri.in", date: "Oct-2024" },
-    { name: "Student Portal", url: "fixmycode.gxuri.in", date: "June-2024" },
-    { name: "AFG Website", url: "audacity.gxuri.in", date: "Jan-2024" },
+    { name: "Recruiter Agent", url: "https://jazzee-employer.vercel.app/", date: "July-2024" },
+    { name: "Student Portal", url: "https://www.jazzeetechnologies.com/", date: "Dec-2024" },
+    { name: "AFG Website", url: "https://www.appliedfluidsgroup.in/", date: "Aug-2024" },
   ]
 
   const techStack = [
@@ -28,7 +28,7 @@ export default function BentoPortfolio() {
   ]
 
   return (
-    <div className="min-h-screen text-gray-900 p-4 md:p-6">
+    <div className="min-h-screen text-gray-900 p-4 md:p-6" id="about-me">
       <div className="max-w-7xl mx-auto">
         {/* Mobile: Stack vertically, Desktop: Bento Grid */}
         <div className="flex flex-col gap-4 md:grid md:grid-cols-6 lg:grid-cols-12 md:gap-6 auto-rows-auto min-h-screen">
@@ -105,7 +105,7 @@ export default function BentoPortfolio() {
                 <div key={index} className="flex justify-between items-start">
                   <div className="flex-1 min-w-0">
                     <div className="font-semibold text-sm md:text-base truncate text-gray-900">{work.name}</div>
-                    <div className="text-xs md:text-sm text-gray-500 truncate">{work.url}</div>
+                    <div className="text-xs md:text-sm text-gray-500 truncate"><a href={work.url}>{work.url}</a></div>
                   </div>
                   <div className="text-xs md:text-sm text-gray-500 ml-2 flex-shrink-0">{work.date}</div>
                 </div>

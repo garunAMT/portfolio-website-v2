@@ -26,13 +26,13 @@ export function NavbarDemo() {
       name: "Skills",
       link: "#skills",
     },
-        {
-      name: "Experience",
-      link: "#experience",
-    },
-        {
+    {
       name: "Projects",
       link: "#projects",
+    },
+    {
+      name: "Experience",
+      link: "#experience",
     },
   ];
 
@@ -47,7 +47,14 @@ export function NavbarDemo() {
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
             {/* <NavbarButton variant="secondary">Login</NavbarButton> */}
-            <NavbarButton variant="primary" className="text-white bg-black">Book a call</NavbarButton>
+            <NavbarButton
+              href="https://cal.com/anurag-tripathi"
+              target="_blank"
+              variant="primary"
+              className="text-white bg-black"
+            >
+              Book a call
+            </NavbarButton>
           </div>
         </NavBody>
 
@@ -84,6 +91,8 @@ export function NavbarDemo() {
                 Login
               </NavbarButton> */}
               <NavbarButton
+                target="_blank"
+                href="https://cal.com/anurag-tripathi"
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
                 className="w-full text-white bg-black"

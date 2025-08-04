@@ -71,8 +71,14 @@ export default function Projects() {
         "A hackathon platform to manage event registrations and real-time updates effectively.",
       image:
         "https://res.cloudinary.com/dtipcangs/image/upload/v1754283581/portfolio-website/jazz-hack_hxuxl9.png",
-      technologies: ["Nextjs", "TailwindCSS", "Shadcn UI", "Sanity CMS", "Typescript"],
-      liveUrl: "#",
+      technologies: [
+        "Nextjs",
+        "TailwindCSS",
+        "Shadcn UI",
+        "Sanity CMS",
+        "Typescript",
+      ],
+      liveUrl: "https://hackathon.jazzeetechnologies.com/",
       githubUrl: "#",
     },
     {
@@ -81,8 +87,14 @@ export default function Projects() {
         "A website for Applied Fluids Group that provides information about their research and projects.",
       image:
         "https://res.cloudinary.com/dtipcangs/image/upload/v1754283669/portfolio-website/afg-v2_mjklvw.png",
-      technologies: ["Nextjs", "TailwindCSS", "Shadcn UI", "Sanity CMS", "Typescript"],
-      liveUrl: "#",
+      technologies: [
+        "Nextjs",
+        "TailwindCSS",
+        "Shadcn UI",
+        "Sanity CMS",
+        "Typescript",
+      ],
+      liveUrl: "https://www.appliedfluidsgroup.in/",
       githubUrl: "#",
     },
     {
@@ -91,7 +103,13 @@ export default function Projects() {
         "A web based inventory management system for Students' Gymkhana, IIT Bhubaneswar.",
       image:
         "https://res.cloudinary.com/dtipcangs/image/upload/v1754284817/portfolio-website/inventory_spr5bb.png",
-      technologies: ["NextJS", "Typescript", "TailwindCSS", "Appwrite", "Kinde Auth"],
+      technologies: [
+        "NextJS",
+        "Typescript",
+        "TailwindCSS",
+        "Appwrite",
+        "Kinde Auth",
+      ],
       liveUrl: "#",
       githubUrl: "#",
     },
@@ -110,62 +128,65 @@ export default function Projects() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <Card
-                key={index}
-                className="overflow-hidden hover:shadow-lg transition-shadow"
+              key={index}
+              className="overflow-hidden hover:shadow-lg transition-shadow p-0"
               >
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    fill
-                    className="object-cover"
-                  />
+              <div className="relative h-48 w-full">
+                <div className="w-full h-full rounded-lg overflow-hidden border-4 border-gray-200">
+                <Image
+                  src={project.image || "/placeholder.svg"}
+                  alt={project.title}
+                  width={400}
+                  height={300}
+                  className="object-cover w-full h-full  rounded-md"
+                />
                 </div>
-                <CardHeader>
-                  <CardTitle className="text-xl">{project.title}</CardTitle>
-                  <CardDescription className="text-sm leading-relaxed">
-                    {project.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.technologies.map((tech, techIndex) => (
-                      <Badge
-                        key={techIndex}
-                        variant="secondary"
-                        className="text-xs"
-                      >
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                  <div className="flex gap-2">
-                    <Button size="sm" asChild>
-                      <Link
-                        href={project.liveUrl}
-                        className="flex items-center gap-1"
-                      >
-                        <ExternalLink size={14} />
-                        Live Demo
-                      </Link>
-                    </Button>
-                    <Button size="sm" variant="outline" asChild>
-                      <Link
-                        href={project.githubUrl}
-                        className="flex items-center gap-1"
-                      >
-                        <Github size={14} />
-                        Code
-                      </Link>
-                    </Button>
-                  </div>
-                </CardContent>
+              </div>
+              <CardHeader>
+                <CardTitle className="text-xl">{project.title}</CardTitle>
+                <CardDescription className="text-sm leading-relaxed">
+                {project.description}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2 mb-8">
+                {project.technologies.map((tech, techIndex) => (
+                  <Badge
+                  key={techIndex}
+                  variant="secondary"
+                  className="text-xs"
+                  >
+                  {tech}
+                  </Badge>
+                ))}
+                </div>
+                <div className="flex gap-2 mb-8">
+                <Button size="sm" asChild>
+                  <Link
+                  href={project.liveUrl}
+                  className="flex items-center gap-1"
+                  >
+                  <ExternalLink size={14} />
+                  Live Demo
+                  </Link>
+                </Button>
+                <Button size="sm" variant="outline" asChild>
+                  <Link
+                  href={project.githubUrl}
+                  className="flex items-center gap-1"
+                  >
+                  <Github size={14} />
+                  Code
+                  </Link>
+                </Button>
+                </div>
+              </CardContent>
               </Card>
             ))}
-          </div>
+            </div>
         </div>
       </div>
     </section>
