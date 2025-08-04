@@ -7,6 +7,7 @@ import Skills from "@/components/shared/skills"
 import Projects from "@/components/shared/projects"
 import Experience from "@/components/shared/experience"
 import { NavbarDemo } from "@/components/shared/navigationBar"
+import BentoPortfolio from "@/components/shared/bento-port"
 // import BookCall from "@/components/shared/book-call"
 // import Footer from "@/components/shared/footer"
 
@@ -16,14 +17,15 @@ export default function Home() {
       {/* <Navbar /> */}
       <NavbarDemo />
       <Hero />
-      <About />
+      <BentoPortfolio />
+      {/* <About /> */}
       <Skills />
       <Projects />
       <Experience />
-      {/* <WhyMe />
-      <Triplabs />
-      <BookCall />
-      <Footer /> */}
+      {/* <WhyMe /> */}
+      {/* <Triplabs /> */}
+      {/* <BookCall /> */}
+      {/* <Footer /> */}
     </main>
   )
 }

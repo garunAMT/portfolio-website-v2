@@ -13,9 +13,9 @@ export default function Experience() {
         "Lead development of scalable web applications serving 100K+ users. Architected microservices infrastructure and mentored junior developers.",
       technologies: ["NextJS", "Node.js", "AWS EC2", "TypeScript", "Supabase", "Python", "FastAPI", "Langchain"],
       achievements: [
-        "Reduced application load time by 40% through optimization",
-        "Led a team of 5 developers on critical product features",
-        "Implemented CI/CD pipeline reducing deployment time by 60%",
+        "Designed and developed the student-facing website to provide a seamless user experience for student onboarding and interaction.",
+        "Built the employer portal with integrated AI recruitment agents, streamlining candidate screening, shortlisting, and selection.",
+        "Created the hackathon platform to manage event registrations, team submissions, and real-time updates effectively.",
       ],
     },
     // {
