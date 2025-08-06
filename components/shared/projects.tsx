@@ -1,15 +1,9 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Github } from "lucide-react";
-import Link from "next/link";
-import Image from "next/image";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
+import { ExternalLink, Github } from 'lucide-react'
+import Link from "next/link"
+import Image from "next/image"
 
 export default function Projects() {
   const projects = [
@@ -18,7 +12,7 @@ export default function Projects() {
       description:
         "A website that uses AI agent to screen, select and schedule interviews with candidates.",
       image:
-        "https://res.cloudinary.com/dtipcangs/image/upload/v1754283581/portfolio-website/jazz-emp_ekubfg.png",
+        "https://res.cloudinary.com/dtipcangs/image/upload/v1754458344/portfolio-website/jazzee-emp_yio6li.png",
       technologies: [
         "Next.js",
         "Supabase",
@@ -120,75 +114,66 @@ export default function Projects() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Featured Projects
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              A showcase of my recent work and technical expertise
-            </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+            <p className="text-lg text-muted-foreground">A showcase of my recent work and technical expertise</p>
           </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <Card
-              key={index}
-              className="overflow-hidden hover:shadow-lg transition-shadow p-0"
-              >
-              <div className="relative h-48 w-full">
-                <div className="w-full h-full rounded-lg overflow-hidden border-4 border-gray-200">
-                <Image
-                  src={project.image || "/placeholder.svg"}
-                  alt={project.title}
-                  width={400}
-                  height={300}
-                  className="object-cover w-full h-full  rounded-md"
-                />
+              <Card key={index} className="overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col">
+                <div className="relative h-48 w-full bg-gray-200 overflow-hidden border-2 border-border rounded-lg">
+                  <Image
+                    loading="lazy"
+                    src={project.image || "/placeholder.svg?height=200&width=400&text=Project+Image"}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    quality={100}
+                  />
                 </div>
-              </div>
-              <CardHeader>
-                <CardTitle className="text-xl">{project.title}</CardTitle>
-                <CardDescription className="text-sm leading-relaxed">
-                {project.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap gap-2 mb-8">
-                {project.technologies.map((tech, techIndex) => (
-                  <Badge
-                  key={techIndex}
-                  variant="secondary"
-                  className="text-xs"
-                  >
-                  {tech}
-                  </Badge>
-                ))}
-                </div>
-                <div className="flex gap-2 mb-8">
-                <Button size="sm" asChild>
-                  <Link
-                  href={project.liveUrl}
-                  className="flex items-center gap-1"
-                  >
-                  <ExternalLink size={14} />
-                  Live Demo
-                  </Link>
-                </Button>
-                <Button size="sm" variant="outline" asChild>
-                  <Link
-                  href={project.githubUrl}
-                  className="flex items-center gap-1"
-                  >
-                  <Github size={14} />
-                  Code
-                  </Link>
-                </Button>
-                </div>
-              </CardContent>
+                <CardHeader className="flex-grow">
+                  <CardTitle className="text-xl font-semibold mb-2">{project.title}</CardTitle>
+                  <CardDescription className="text-sm text-muted-foreground leading-relaxed">
+                    {project.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <div className="flex flex-wrap gap-1 mb-4">
+                    {project.technologies.map((tech, techIndex) => (
+                      <Badge key={techIndex} variant="secondary" className="text-[0.65rem] px-1.5 py-0.5">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                  <div className="flex gap-2">
+                    {project.liveUrl && (
+                      <Button size="sm" asChild className="flex-1">
+                        <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                          <span className="flex items-center justify-center gap-1"> {/* Wrapped icon and text in span */}
+                            <ExternalLink size={14} />
+                            Live Demo
+                          </span>
+                        </Link>
+                      </Button>
+                    )}
+                    {project.githubUrl && project.githubUrl !== "#" && (
+                      <Button size="sm" variant="outline" asChild className="flex-1">
+                        <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                          <span className="flex items-center justify-center gap-1"> {/* Wrapped icon and text in span */}
+                            <Github size={14} />
+                            Code
+                          </span>
+                        </Link>
+                      </Button>
+                    )}
+                  </div>
+                </CardContent>
               </Card>
             ))}
-            </div>
+          </div>
         </div>
       </div>
     </section>
-  );
+  )
 }

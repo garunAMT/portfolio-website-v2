@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
+// import { Button } from "@/components/ui/button"
+// import { Badge } from "@/components/ui/badge"
 import { Calendar, X, Sparkles, Github, BookOpen, Linkedin, Mail } from "lucide-react"
 import Image from "next/image"
 
@@ -34,7 +34,7 @@ export default function BentoPortfolio() {
         <div className="flex flex-col gap-4 md:grid md:grid-cols-6 lg:grid-cols-12 md:gap-6 auto-rows-auto min-h-screen">
           {/* Hero Image Section - Fixed size */}
           <div className="h-80 md:h-96 lg:h-[800px] md:col-span-3 lg:col-span-4 lg:row-span-3 bg-white rounded-2xl md:rounded-3xl overflow-hidden relative flex-shrink-0 border border-gray-200 shadow-sm">
-            <Image src="/placeholder.svg?height=600&width=400" alt="Gurvinder Singh" fill className="object-cover" />
+            <Image src="https://res.cloudinary.com/dtipcangs/image/upload/v1754456028/portfolio-website/Anurag_Tripathi_ulpfeu.jpg" alt="Anurag Tripathi" fill className="object-cover" />
           </div>
 
           {/* Combined Title and Description Section */}
@@ -68,7 +68,7 @@ export default function BentoPortfolio() {
                 <Github className="h-8 w-8 md:h-16 md:w-16 lg:h-8 lg:w-8 transition-transform duration-200 group-hover:rotate-12" />
               </a>
               <a
-                href="https://github.com/garunAMT"
+                href="https://x.com/frkng_engineer"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-200 rounded-lg h-12 w-12 md:h-20 md:w-20 lg:h-12 lg:w-12 flex items-center justify-center transition-transform duration-200 hover:scale-110 hover:bg-gray-300 group"
@@ -76,7 +76,7 @@ export default function BentoPortfolio() {
                 <X className="h-8 w-8 md:h-16 md:w-16 lg:h-8 lg:w-8 transition-transform duration-200 group-hover:-rotate-12" />
               </a>
               <a
-                href="https://github.com/garunAMT"
+                href="https://www.linkedin.com/in/anurag-mani-tripathi/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-200 rounded-lg h-12 w-12 md:h-20 md:w-20 lg:h-12 lg:w-12 flex items-center justify-center transition-transform duration-200 hover:scale-110 hover:bg-gray-300 group"
@@ -84,7 +84,7 @@ export default function BentoPortfolio() {
                 <Linkedin className="h-8 w-8 md:h-16 md:w-16 lg:h-8 lg:w-8 transition-transform duration-200 group-hover:scale-125" />
               </a>
               <a
-                href="https://github.com/garunAMT"
+                href="mailto:anuragtripathi2901@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gray-200 rounded-lg h-12 w-12 md:h-20 md:w-20 lg:h-12 lg:w-12 flex items-center justify-center transition-transform duration-200 hover:scale-110 hover:bg-gray-300 group"
