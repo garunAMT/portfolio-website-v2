@@ -19,7 +19,7 @@ export default function Hero() {
               </span>
             </h1>
             <h2 className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8">
-              Full Stack Engineer | Machine Learning | GenAI | Agentic AI
+              Full Stack Development | Machine Learning | Agentic AI
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
               I build scalable web applications and AI-powered solutions that solve real-world problems. Passionate

@@ -45,11 +45,7 @@ export default function BentoPortfolio() {
               <br />
             </h1>
             <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-              My journey in the world of design began 4 years ago with a fascination for the digital realm. From my
-              early days of curiosity to todays expertise, Ive honed the art of transforming ideas into captivating
-              designs, mastering the art of creating design solutions that bridge the gap between aesthetics and
-              functionality. I believe in crafting experiences that not only look beautiful but also solve real
-              problems. Lets craft something remarkable together that makes a lasting impact.
+              My journey into the world of development started 4 years ago with a deep curiosity for how things work behind the screen. What began as a hobby soon turned into a passion for building products that are not only functional but also meaningful. Over the years, I&apos;ve refined my skills in full-stack development, focusing on crafting clean, efficient, and scalable solutions. More recently, I&apos;ve been diving into the world of AI, exploring how emerging technologies like agentic systems can unlock new possibilities in product design and automation. Come let's create something amazing together!!
             </p>
           </div>
 
