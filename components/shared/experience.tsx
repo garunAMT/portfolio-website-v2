@@ -73,7 +73,7 @@ export default function Experience() {
 
           <div className="space-y-8">
             {experiences.map((exp, index) => (
-              <Card key={index} className="relative">
+              <Card key={index} className="relative py-4">
                 <CardHeader>
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                     <div>
